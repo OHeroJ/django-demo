@@ -2,7 +2,7 @@ from django.urls import path
 from django.views.generic import TemplateView
 from .views import (TaskListView, TaskDetailView, TaskCreateView, TaskUpdateView, TaskDeleteView)
 
-app_name = 'tasks'
+app_name = 'tasks' # 域名空间
 urlpatterns = [
     path("", TemplateView.as_view(template_name="tasks/home.html"), name="home"),
     path("help/", TemplateView.as_view(template_name="tasks/help.html"), name="help"),

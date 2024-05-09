@@ -14,7 +14,7 @@ from pathlib import Path
 import os 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent # 这将返回settings.py文件所在目录的上级目录，也就是项目的根目录
 
 
 # Quick-start development settings - unsuitable for production
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'tasks',
+    'emoticons',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -57,9 +59,9 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-           
+           BASE_DIR / 'templates', # 设置模板目录， 属于项目的模板文件路径一般是项目根目录下的templates文件夹
         ],
-        "APP_DIRS": True,
+        "APP_DIRS": True, # 告诉模板引擎是否搜索app目录下的templates目录
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.debug",
@@ -123,7 +125,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "static/" # 作用是告诉Django静态文件会存放在各app下的static目录里
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static", # 项目根目录下的静态文件路径
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
