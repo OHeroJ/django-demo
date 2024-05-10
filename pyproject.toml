@@ -9,6 +9,8 @@ readme = "README.md"
 python = "^3.12"
 django = "^5.0.3"
 psycopg = "^3.1.18"
+django-crispy-forms = "^2.1"
+crispy-bootstrap5 = "^2024.2"
 
 
 [tool.poetry.group.dev.dependencies]

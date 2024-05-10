@@ -16,7 +16,7 @@ export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 ```sh
 $ docker-compose up -d 
 $ python manage.py migrate
-$ 
+
 ```
 
 ## 创建模型后，生成迁移脚本
@@ -264,7 +264,7 @@ books_written_by_author = author.book_set.all()
 
 * 若应用和工程的模板模板都包含被重写的模板，默认的 Django 模板加载器会先尝试加载工程目录下的模板。换句话说，先查找 DIRS，其次 APP_DIRS。
 
-
+boostrap 的版本 5.3.3
 
 
 

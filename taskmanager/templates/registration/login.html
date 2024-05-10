@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% block title %}登录{% endblock title %}
 
 {% block content %}
 <h2>登录</h2>
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form|crispy }}
     <button class="btn btn-success ml-2" type="submit">登录</button>
 </form>
 {% endblock content %}

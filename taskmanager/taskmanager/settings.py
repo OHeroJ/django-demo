@@ -38,6 +38,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # 第三方
+    "crispy_forms",
+    "crispy_bootstrap5",
+    
+    # 本地
     'accounts',
     'emoticons',
     'pages',
@@ -140,3 +145,6 @@ AUTH_USER_MODEL = 'accounts.CustomUser' # 自定义用户模型
 
 LOGIN_REDIRECT_URL= 'home' # 登录成功后重定向到首页
 LOGOUT_REDIRECT_URL= 'home' # 登出后重定向到首页
+
+CRISPY_ALLOWED_TEMPLATE_PACKS="bootstrap5"
+CRISPY_TEMPLATE_PACK="bootstrap5"
