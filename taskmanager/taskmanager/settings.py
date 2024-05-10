@@ -146,5 +146,9 @@ AUTH_USER_MODEL = 'accounts.CustomUser' # 自定义用户模型
 LOGIN_REDIRECT_URL= 'home' # 登录成功后重定向到首页
 LOGOUT_REDIRECT_URL= 'home' # 登出后重定向到首页
 
-CRISPY_ALLOWED_TEMPLATE_PACKS="bootstrap5"
-CRISPY_TEMPLATE_PACK="bootstrap5"
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+# 发送邮件配置
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
