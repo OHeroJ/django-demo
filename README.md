@@ -16,6 +16,7 @@ export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 ```sh
 $ docker-compose up -d 
 $ python manage.py migrate
+$ 
 ```
 
 ## 创建模型后，生成迁移脚本

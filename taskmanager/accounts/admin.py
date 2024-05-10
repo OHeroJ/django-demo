@@ -9,6 +9,7 @@ class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
     model = CustomUser
+    # 会在 admin 列表展示
     list_display = ['email', 'username', 'age', 'is_staff']
     fieldsets = UserAdmin.fieldsets + (
         (None, {'fields': ('age',)}),
