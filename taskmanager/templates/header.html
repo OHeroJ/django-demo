@@ -1,0 +1,18 @@
+{% load static %}
+
+<div class="container">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"><img src="{% static 'images/logo.svg' %}" width="40px" alt=""></a>
+        </div>
+        <ul class="nav navbar-nav" role="navigation">
+            <li><a href="{% url 'emoticons:index' %}">Emoticon</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right" style="margin-right: 10px;">
+            
+
+            <li><a href="{% url 'accounts:login' %}">LOGIN</a></li>
+        </ul>
+    </nav>
+</div>

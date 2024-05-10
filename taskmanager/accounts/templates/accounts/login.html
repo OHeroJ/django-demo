@@ -1,7 +1,18 @@
+{% extends "base.html" %}
 
-<h1>登录</h1>
-<form action="." method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Login">
-</form>
+{%block title%} Login {%endblock%}
+
+{%block content%}
+
+<div class="row text-center vertical-middle-sm">
+    <h1>登录</h1>
+    <p>输入你的用户名和密码</p>
+    <form class="form-horizontal" action="{% url 'accounts:login' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+
+{%endblock%}

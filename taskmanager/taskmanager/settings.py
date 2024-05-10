@@ -38,9 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'tasks',
-    'emoticons',
     'accounts',
+    'emoticons',
 ]
 
 MIDDLEWARE = [
@@ -82,7 +81,7 @@ WSGI_APPLICATION = "taskmanager.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', 'task_manager'),
+        'NAME': os.getenv('DB_NAME', 'emoticons'),
         'USER': os.getenv('DB_USER', 'postgres'),
         'PASSWORD': os.getenv('DB_PASSWORD', 'mysecretpassword'),
         'HOST': os.getenv('DB_HOST', 'localhost'),
@@ -135,3 +134,5 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTH_USER_MODEL = 'accounts.CustomUser' # 自定义用户模型
