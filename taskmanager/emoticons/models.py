@@ -21,7 +21,7 @@ class Category(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="更新时间")
     def __str__(self) -> str:
-        return self.name + "("+ self.mode.name + ")"
+        return self.name
     
     class Meta:
         verbose_name = "分类"
@@ -36,7 +36,7 @@ class Tag(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     
     def __str__(self) -> str:
-        return self.name + "("+ self.mode.name + ")"
+        return self.name
     
     class Meta:
         verbose_name = "标签"
