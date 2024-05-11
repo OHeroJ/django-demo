@@ -41,11 +41,13 @@ INSTALLED_APPS = [
     # 第三方
     "crispy_forms",
     "crispy_bootstrap5",
+    "rest_framework",
     
     # 本地
     'accounts',
     'emoticons',
     'pages',
+    'apis',
 ]
 
 MIDDLEWARE = [
