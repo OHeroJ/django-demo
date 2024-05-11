@@ -23,7 +23,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('accounts/', include('accounts.urls')), # registration 会覆写系统自带的，注册需要创建自己的视图和URL
     path('accounts/', include('django.contrib.auth.urls')), # 系统自带的，提供了用于登录和注销的视图和URL
-    path('', TemplateView.as_view(template_name="home.html"), name="home"), 
+    path('', include('pages.urls')), 
     
     path('emoticons/', include('emoticons.urls')),
 ]
