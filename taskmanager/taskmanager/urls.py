@@ -20,12 +20,10 @@ from django.urls import path, include
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path("admin/", admin.site.urls), # django 自带后台
     path('accounts/', include('accounts.urls')), # registration 会覆写系统自带的，注册需要创建自己的视图和URL
     path('accounts/', include('django.contrib.auth.urls')), # 系统自带的，提供了用于登录和注销的视图和URL
     path('emoticons/', include('emoticons.urls')),
     path('api/', include('apis.urls')),
     path('', include('pages.urls')), 
-    
-    
 ]

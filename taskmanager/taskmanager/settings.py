@@ -154,3 +154,9 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 # 发送邮件配置
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",  
+    ],
+}
+
